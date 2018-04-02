@@ -1,0 +1,27 @@
+<vib version="5.0">
+   <name>packer</name>
+   <version>1.0.0-1</version>
+   <vendor>umich</vendor>
+   <summary>Packer config for ESXi</summary>
+   <description>Configures an ESXi host for use with the vmware-iso packer builder</description>
+   <relationships>
+      <depends/>
+      <conflicts/>
+      <replaces/>
+      <provides/>
+      <compatibleWith/>
+   </relationships>
+   <software-tags/>
+   <system-requires>
+      <maintenance-mode>false</maintenance-mode>
+   </system-requires>
+   <acceptance-level>community</acceptance-level>
+   <live-install-allowed>true</live-install-allowed>
+   <live-remove-allowed>true</live-remove-allowed>
+   <cimom-restart>false</cimom-restart>
+   <stateless-ready>true</stateless-ready>
+   <overlay>false</overlay>
+   <payloads>
+      <payload name="payload1" type="vgz"></payload>
+   </payloads>
+</vib>

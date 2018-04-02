@@ -1,0 +1,24 @@
+#!/bin/sh
+
+ARG1=$1
+ARG2=$2
+
+if [[ "${ARG1}" == "start" ]] && [[ "${ARG2}" == "install" ]]; then
+ /bin/logger "packer-vib custom script ran on start-install"
+ esxcli system settings advanced set -o /Net/GuestIPHack -i 1
+ esxcli system settings advanced set -o /UserVars/SuppressShellWarning -i 1
+ vim-cmd hostsvc/enable_ssh
+ vim-cmd hostsvc/start_ssh
+elif [[ "${ARG1}" == "start" ]] && [[ "${ARG2}" == "upgrade" ]]; then
+ /bin/logger "packer-vib custom script ran on start-upgrade"
+ esxcli system settings advanced set -o /Net/GuestIPHack -i 1
+ esxcli system settings advanced set -o /UserVars/SuppressShellWarning -i 1
+ vim-cmd hostsvc/enable_ssh
+ vim-cmd hostsvc/start_ssh
+elif [[ "${ARG1}" == "stop" ]] && [[ "${ARG2}" == "remove" ]]; then
+ /bin/logger "packer-vib custom script ran on stop-remove"
+ esxcli system settings advanced set -o /Net/GuestIPHack -i 0
+ esxcli system settings advanced set -o /UserVars/SuppressShellWarning -i 0
+ vim-cmd hostsvc/disable_ssh
+ vim-cmd hostsvc/stop_ssh
+fi
