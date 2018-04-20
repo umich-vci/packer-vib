@@ -8,6 +8,10 @@ Specifically, it:
 * Enables SSH and supresses the warning message
 * Enables the GuestIPHack advanced option
 
+This has been tested with ESXi 6.0 Update 3.  It is possible it would work with ESXi 5.5.
+
+This will not be helpful with ESXi 6.5 as VNC support was removed in that version.
+
 Build Instructions
 ===================
 
