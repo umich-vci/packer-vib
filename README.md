@@ -14,8 +14,8 @@ This will not be helpful with ESXi 6.5 as VNC support was removed in that versio
 
 Install Instructions
 ===================
-`$ esxcli software acceptance set --level=CommunitySupported
-$ esxcli software vib install -v http://github.com/umich-vci/packer-vib/releases/download/v1.0.0-1/packer.vib`
+    $ esxcli software acceptance set --level=CommunitySupported
+    $ esxcli software vib install -v http://github.com/umich-vci/packer-vib/releases/download/v1.0.0-1/packer.vib
 
 Build Instructions
 ===================
