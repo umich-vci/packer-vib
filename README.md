@@ -8,9 +8,11 @@ Specifically, it:
 * Enables SSH and supresses the warning message
 * Enables the GuestIPHack advanced option
 
-This has been tested with ESXi 6.0 Update 3.  It is possible it would work with ESXi 5.5.
+This has been tested with ESXi 6.0 Update 3, ESXi 6.5 Update 2, and ESXi 6.7.
+It is possible it would work with ESXi 5.5.
 
-This will not be helpful with ESXi 6.5 as VNC support was removed in that version.
+If using this with ESXi 6.5 or 6.7, VNC password support seems to have been
+removed. You must set `vnc_disable_password` to `true` in your Packer template.
 
 Install Instructions
 ===================
