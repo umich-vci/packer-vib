@@ -1,6 +1,8 @@
 # packer-vib
 
-This repository contains content to build a vib file for ESXi. The goal is to configure a host to enable use as a target for the [Packer VMware builders](https://www.packer.io/docs/builders/vmware.html).
+This repository contains content to build a vib file for ESXi. The goal is to configure a host to enable use as a target for the [Packer VMware builders](https://www.packer.io/docs/builders/vmware.html) (`vmware-iso` and `vmware-vmx`).
+
+If you have a license for vCenter, you are probably much better off using the `vsphere-iso` or `vsphere-clone` builders. Additionally, ESXi 7.0 has completely dropped support for VNC so this VIB will not work.
 
 Specifically, it:
 
