@@ -23,7 +23,16 @@ esxcli software acceptance set --level=CommunitySupported
 esxcli software vib install -v http://github.com/umich-vci/packer-vib/releases/download/v1.0.0-1/packer.vib
 ```
 
-## Build Instructions
+## Build Instructions (docker)
+
+In a Linux host with docker installed, use the [lamw/vibauthor](https://registry.hub.docker.com/r/lamw/vibauthor) container to build:
+
+```bash
+docker run --rm -v $PWD:/root lamw/vibauthor \
+    vibauthor -C -t stage -v packer.vib -O packer-offline-bundle.zip -f
+```
+
+## Build Instructions (CentOS)
 
 In a CentOS 6.6 host install the [vib-author fling](https://flings.vmware.com/vib-author) dependency:
 
