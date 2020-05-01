@@ -20,7 +20,7 @@ In ESXi execute:
 
 ```sh
 esxcli software acceptance set --level=CommunitySupported
-esxcli software vib install -v http://github.com/umich-vci/packer-vib/releases/download/v1.0.0-1/packer.vib
+esxcli software vib install -v https://github.com/umich-vci/packer-vib/releases/download/v1.0.0-1/packer.vib
 ```
 
 ## Build Instructions (docker)
